@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: rgb(112, 24, 103);
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: "Spartan", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 2.7rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
