@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-input {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.input-box {
+    padding: 0.5rem 1rem;
+    border: 1px solid orange;
+    outline: none;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background-color: orange;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.renderList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 0rem;
+}
+
+h1 {
+    color: orange;
+}
+
+input[type="checkbox"] {
+    accent-color: wheat;
+}
