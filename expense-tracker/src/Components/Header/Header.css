@@ -1,0 +1,15 @@
+.heading {
+    color: white;
+    color: rgb(130, 105, 58);
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: orange;
+    background-color: rgb(150, 111, 38);
+    padding: 2rem;
+    text-align: center;
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+}

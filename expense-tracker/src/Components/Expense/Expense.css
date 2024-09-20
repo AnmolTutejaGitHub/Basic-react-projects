@@ -1,0 +1,33 @@
+.expense-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    background-color: white;
+    color: black;
+    padding: 1.25rem;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+    font-size: 18px;
+    color: orange;
+    background-color: rgb(72, 58, 32);
+}
+
+.expense-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(193, 146, 58);
+}
+
+.expense-img {
+    border-radius: 50%;
+}
+
+.expense-delete {
+    cursor: pointer;
+    margin-left: auto;
+}

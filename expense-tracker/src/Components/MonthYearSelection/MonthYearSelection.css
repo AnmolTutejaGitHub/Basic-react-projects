@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.yearmonth {
+    font-size: 1.25rem;
+    color: white;
+    font-family: "Lato", sans-serif;
+}
+
+.select-month-year {
+    margin: 2rem;
+    width: 100%;
+}
+
+.submit-btn {
+    padding: 12px;
+    background-color: rgb(163, 119, 36);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.select-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.select-form fieldset input {
+    width: 100%;
+}
