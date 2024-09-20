@@ -4,6 +4,8 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './MonthExpense.css';
 import { IoMdAddCircle } from "react-icons/io";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MonthExpense({ month, year, db, AddToDB, onDelete }) {
 
@@ -12,6 +14,9 @@ function MonthExpense({ month, year, db, AddToDB, onDelete }) {
     const [detail, setDetail] = useState('');
     const [amount, setAmount] = useState('');
     const [dateClicked, setDisplay] = useState(true);
+    const [monthlyExpense, setMonthlyExpense] = useState(0);
+
+    const notify = () => toast.warn("Amount must be Numeric");
 
     function renderExpense() {
         const Monthexpenses = db.filter((expense) => {
@@ -47,10 +52,24 @@ function MonthExpense({ month, year, db, AddToDB, onDelete }) {
         setDisplay(true);
     }
 
+    function isNumeric(str) {
+        return !isNaN(Number(str));
+    }
+
     function AddExpense() {
-        AddToDB(selectedDate.toLocaleDateString(), detail, amount);
-        setDetail('');
-        setAmount('');
+        if (selectedDate == null) {
+            toast.warn("Please select a date");
+            return;
+        }
+        if (isNumeric(amount) && amount != '') {
+            AddToDB(selectedDate.toLocaleDateString(), detail, amount);
+            setDetail('');
+            setAmount('');
+        }
+        else {
+            notify();
+        }
+
     }
 
     function handleAmount(event) {
@@ -65,6 +84,7 @@ function MonthExpense({ month, year, db, AddToDB, onDelete }) {
 
     return (
         <div className="month-expense">
+            <ToastContainer position="top-center" />
             <div>
                 {/* <div>{month} {year}</div> */}
                 <div className="add-details">

@@ -26,8 +26,9 @@ function App() {
             amount: amount,
             //id : undefined error when del without  refeshing 
         };
-        await axios.post('http://localhost:3001/expenses', expense);
-        setDB([...db, expense]);
+        const response = await axios.post('http://localhost:3001/expenses', expense);
+        //setDB([...db, expense]);
+        setDB([...db, response.data]);
     }
 
 
